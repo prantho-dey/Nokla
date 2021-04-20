@@ -1,0 +1,55 @@
+.section-title {
+
+    @include mq(xs){
+        padding-bottom: 50px;
+    }
+    span {
+        display: inline-block;
+        font-size: 18px;
+        font-weight: 700;
+        color: #3648d6;
+        position: relative;
+        text-transform: capitalize;
+
+        &::before {
+            position: absolute;
+            content: "";
+            height: 2px;
+            width: 40px;
+            background-color: #3648d6;
+            left: -65px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        &::after {
+            position: absolute;
+            content: "";
+            height: 2px;
+            width: 40px;
+            background-color: #3648d6;
+            right: -65px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+    .title {
+        font-size: 55px;
+        font-weight: 700;
+        margin-bottom: 0;
+        line-height: 60px;
+        padding-top: 20px;
+
+        @include mq(lg){
+            font-size: 45px;
+        }
+        @include mq(xs){
+            font-size: 35px;
+            line-height: 45px;
+        }
+    }
+}
+
+.speacing {
+    padding-top: 130px;
+    padding-bottom: 130px;
+}

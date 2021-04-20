@@ -1,0 +1,110 @@
+
+.project-area {
+    @include mq(lg){
+        padding-top: 100px;
+    }
+    @include mq(md){
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+    @include mq(xs){
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+}
+.single-project {
+    position: relative;
+    overflow: hidden;
+
+    img {
+        width: 100%;
+    }
+    &::before {
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 50%;
+        background-color: $heading-color;
+        opacity: 0;
+        top: -50%;
+        left: 0;
+        @include transition(.3s);
+    }
+    &::after {
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 50%;
+        background-color: $heading-color;
+        opacity: 0;
+        bottom: -50%;
+        left: 0;
+        @include transition(.3s);
+    }
+
+    &:hover:before {
+        top: 0;
+        opacity: 0.6;
+    }
+    &:hover:after {
+        bottom: 0;
+        opacity: 0.6;
+    }
+    &:hover {
+        .project-show {
+            top: 30px;
+        }
+        .project-content {
+            bottom: 30px;
+        }
+    }
+    .project-show {
+        width: 50px;
+        height: 50px;
+        background-color: $theme-color;
+        top: -50px;
+        right: 50px;
+        position: absolute;
+        content: "";
+        line-height: 50px;
+        text-align: center;
+        cursor: pointer;
+        @include transition(.3s);
+
+        i {
+            color: #fff;
+            font-size: 18px;
+            
+        }
+    }
+
+    .project-content {
+        position: absolute;
+        background-color: #fff;
+        width: 80%;
+        height: 110px;
+        bottom: -150px;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+        padding: 30px 0;
+        border-radius: 10px;
+        @include transition(.3s);
+        z-index: 999;
+
+        a {
+            display: block; 
+            font-size: 24px;
+            margin-bottom: 10px;
+            font-weight: 700;
+            line-height: 1;
+            color: $heading-color;
+        }
+        p {
+            font-size: 16px;
+            padding: 0;
+            margin: 0;
+            line-height: 1;
+        }
+    }
+}

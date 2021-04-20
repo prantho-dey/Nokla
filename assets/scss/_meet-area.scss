@@ -1,0 +1,145 @@
+.meet-area {
+    background-size: cover; 
+    background-position: top;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: relative;
+
+    @include mq(xs){
+        background-attachment: inherit;
+        background-position: center center;
+    }
+    @include mq(xs){
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+}
+
+.meet-ccontent {
+    position: relative;
+    z-index: 999;
+    span {
+        font-size: 18px;
+        display: block;
+        font-weight: 700;
+        color: #fff;
+        padding-left: 70px;
+        position: relative;
+        text-transform: capitalize;
+
+        &::before {
+            position: absolute;
+            content: "";
+            height: 2px;
+            width: 40px;
+            background-color: #fff;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+    h2 {
+        font-size: 55px;
+        font-weight: 700;
+        padding-right: 20px;
+        margin-top: 14px;
+        margin-bottom: 30px;
+        text-transform: capitalize;
+        color: #fff;
+        @include mq(lg){
+            font-size: 48px;
+        }
+        
+        @include mq(xs){
+            font-size: 36px;
+        }
+    }
+    .meet-btn-1 {
+        background-color: $theme-color;
+        color: #fff;
+        padding: 22px 40px;
+        border-radius: 100px;
+        line-height: 1;
+        display: inline-block;
+        font-size: 15px;
+        text-transform: uppercase;
+        font-weight: 600;
+        margin-right: 15px;
+        i {
+            padding-left: 10px;
+        }
+
+        &:hover {
+            background-color: #fff;
+            color: $theme-color;
+        }
+        @include mq(xs){
+            margin-bottom: 20px;
+        }
+    }
+    .meet-btn-2 {
+        background-color: #fff;
+        color: $heading-color;
+        padding: 22px 40px;
+        border-radius: 100px;
+        line-height: 1;
+        display: inline-block;
+        font-size: 15px;
+        text-transform: uppercase;
+        font-weight: 600;
+        i {
+            padding-left: 10px;
+        }
+
+        &:hover {
+            background-color: $heading-color;
+            color: #fff;
+        }
+    }
+}
+
+.meet-play {
+    
+    a {
+        background-color: #fff;
+        width: 110px;
+        height: 110px;
+        display: inline-block;
+        text-align: center;
+        line-height: 85px;
+        border: 12px solid #424a65;
+        font-size: 18px;
+        color: $theme-color;
+    }
+    @include mq(md){
+        position: absolute;
+        top: -80px;
+        right: 30px;
+    }
+    @include mq(xs){
+        display: none;
+    }
+}
+
+.stroke {
+	position: absolute;
+	content: "";
+	font-size: 265px;
+	color: #3d445e;
+	top: 50%;
+	left: 0;
+    opacity: 0.7;
+	transform: translateY(-55%);
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 1px;
+
+    @include mq(lg){
+        font-size: 180px;
+    }
+    @include mq(md){
+        display: none;
+    }
+    @include mq(xs){
+        display: none;
+    }
+}

@@ -1,0 +1,92 @@
+.service-area {
+    background-color: #f1f2fc;
+    @include mq(lg){
+        padding-top: 100px;
+    }
+    @include mq(md){
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+    @include mq(xs){
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+}
+
+.services {
+    background-color: #fff;
+    padding: 55px 50px;
+    position: relative;
+    border-bottom: 3px solid $theme-color;
+    @include transition(.3s);
+    .icon {
+        position: relative;
+        i {
+            font-size: 35px;
+            width: 85px;
+            height: 85px;
+            background-color: $theme-color;
+            text-align: center;
+            line-height: 85px;
+            color: #fff;
+            border-radius: 100px 100px 0px 100px;
+            z-index: 99;
+            position: relative;
+            @include transition(.3s)
+        }
+        &::before {
+                position: absolute;
+                content: "";
+                width: 85px;
+                height: 85px;
+                background-color: #ebecfb;
+                border-radius: 100px 100px 0px 100px;
+                left: 50%;
+                transform: translateX(-60%);
+                top: -10px;
+                @include transition(.3s);
+            }
+    }
+    h4 {
+        font-size: 24px;
+        line-height: 1;
+        margin-top: 30px;
+        @include transition(.3s);
+
+       
+    }
+    p {
+        font-size: 16px;
+        line-height: 24px;
+
+    }
+    a {
+        font-size: 16px;
+        color: #000a2d;
+        text-transform: uppercase;
+        line-height: 1;
+        font-weight: bold;
+        i {
+            padding-left: 10px;
+        }
+    }
+    &:hover {
+        background-color: $theme-color;
+        color: #fff;
+        .icon {
+            i {
+                color: $theme-color;
+                background-color: #fff;
+            }
+            &::before {
+                background-color: #4a5bda;
+            }
+        }
+        a {
+            color: #fff;
+        }
+        h4 {
+            color: #fff;
+        }
+    }
+}
