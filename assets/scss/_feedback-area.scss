@@ -1,8 +1,19 @@
 .feedback-area {
     background-color: #f1f2fc;
+    position: relative;
     @include mq(xs){
         padding-top: 50px;
         padding-bottom: 50px;
+    }
+
+    .feedback-round-shape {
+        position: absolute;
+        right: 175px;
+        top: 130px;
+        @include mq(xl){
+            right: 30px;
+            top: 50px;
+        }
     }
 }
 .feedback-shape {

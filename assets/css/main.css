@@ -1386,11 +1386,23 @@ label {
 
 .feedback-area {
   background-color: #f1f2fc;
+  position: relative;
 }
 @media (max-width: 767px) {
   .feedback-area {
     padding-top: 50px;
     padding-bottom: 50px;
+  }
+}
+.feedback-area .feedback-round-shape {
+  position: absolute;
+  right: 175px;
+  top: 130px;
+}
+@media (min-width: 1200px) and (max-width: 1500px) {
+  .feedback-area .feedback-round-shape {
+    right: 30px;
+    top: 50px;
   }
 }
 
